@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    {{head}}
+</head>
+
+<body>
+<!-- Header -->
+<!--  <a name="about"></a> -->
+<div class="intro-header" style="background-image:url('[*backimage*]');">
+    {{header}}
+</div>
+<!-- /.intro-header -->
+
+<!-- Page Content -->
+
+<a  name="services"></a>
+<div class="content-section-a">
+
+    <div class="container well well-lg"  style="margin-bottom: -20px;margin-top: -40px;">
+        <div class="row">
+            <div class="clearfix">
+
+
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3"  style="padding-left: 10px; padding-right: 10px;">
+                    {{sidemenu}}
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                    <div class="breacr">{{breadcrumbs}}</div>
+                    <div class="h1wrap">
+                        <h1>[*pagetitle*]</h1>
+                    </div>
+                    <div class="contant content">
+                        [!multiTV? &tvName=`multipart` &docid=`[*id*]` &tplConfig=`` &display=`all` &rows=`all`!]
+                        [*reslink*]
+                        [*resarticle*]
+                        <div class="contant-inner content_inner">
+                            [*content*]
+                        </div>
+                        [*jot*]
+                        [*form*]
+
+
+                        <!--fancy-->
+
+                        {{adaptfancy}}
+
+                        <!--fancy-end-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Elastislide Carousel -->
+        {{Elastislide}}
+        <!-- End Elastislide Carousel -->
+
+    </div>
+    <!-- /.container -->
+
+</div>
+<!-- /.content-section-a -->
+<a  name="contact"></a>
+
+
+
+<!-- Footer -->
+<footer  id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 foot">
+                {{copyright}}
+
+            </div>
+
+
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 fmenu">
+                {{footmenu}}
+            </div>
+        </div>
+    </div>
+</footer>
+
+{{footscript}}
+<script>
+    $(document).ready(function(){
+        $('#myTab a').click(function (e) {
+            e.preventDefault()
+            $(this).tab('show')
+        })
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".openblock").click(function(){
+            $( this ).toggleClass('closeblock');
+            $( this ).parent().toggleClass('bounce');
+        });
+    });
+</script>
+</body>
+
+</html>
